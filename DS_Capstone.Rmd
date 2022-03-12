@@ -1,0 +1,152 @@
+---
+title: "DS_Capstone VM"
+author: "Veeksha Madhu"
+date: "3/8/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+d <- read.csv("WA state_ccc2.csv", header=TRUE)
+colnames(d) <- as.character(unlist(d[1,]))
+da = d[-1, ]
+statewide = da[nrow(da),]
+data = da[-nrow(da),]
+dat <- data[,2:17]
+chars <- sapply(dat, is.character)
+dat[ , chars] <- as.data.frame(apply(dat[ , chars], 2, as.numeric))
+data[,2:17] <- dat
+
+head(data)
+
+```
+```{r}
+infants <- data[, 1:5]
+head(infants)
+
+toddler <- data[c(-2,-3,-4,-5,-10:-18)]
+head(toddler)
+
+preschool <- data[c(-2:-9,-14:-18)]
+head(preschool)
+
+schoolage <- data[c(-2:-13)]
+head(schoolage)
+```
+
+```{r}
+library("vioplot")
+x1 <- infants$`Median Rate`
+x2 <- toddler$`Median Rate`
+x3 <- preschool$`Median Rate`
+x4 <- schoolage$`Median Rate`
+vioplot(x1, x2, x3, x4, names=c("Infants", "Toddlers", "Pre-school", 'School Age'),
+   col=c("red","yellow","blue", "green"), ylab = "Dollars $")
+title("Median rates across all four age groups")
+
+```
+
+```{r}
+y1 <- infants$`Subsidy Rate`
+y2 <- toddler$`Subsidy Rate`
+y3 <- preschool$`Subsidy Rate`
+y4 <- schoolage$`Subsidy Rate`
+
+vioplot(y1,y2,y3,y4, names=c("Infants","Toddlers","Preschool", "School Age"), col=c("red","yellow","blue", "green"))
+```
+
+Looking at Infants data
+```{r}
+infantsnew <- infants[,-1]
+library("MVA")
+attach(infantsnew)
+
+bvbox(cbind(`Median Rate`,`Subsidy Rate`),ylab = "Subsity Rate",
+  xlab = "Median Rate")
+```
+
+Lasso Regression
+```{r}
+library(glmnet)
+n <- 100
+x1<- runif(n,0,1)
+x2<- runif(n,0,1)
+x3<- runif(n,0,1)
+n <- 100
+
+coefs.lasso <- matrix(NA,nrow=1000,ncol=4)
+for(i in 1:1000){
+  set.seed(i) #set the seed so that we all generate the same set of random samples
+  error <- rnorm(n,mean=0,sd=0.1)
+  y <- 1+2*x1+3*x2+0*x3+error
+  result.lasso <- cv.glmnet(x=cbind(x1,x2,x3), y=y, family="gaussian",alpha=1)
+  coefs.lasso[i,] <- as.vector(coef(result.lasso,s=result.lasso$lambda.min))}
+
+coefs.lasso[i,]
+```
+
+VIF model
+```{r}
+attach(infantsnew)
+library(car)
+
+vif(lm(`Median Rate`~.,data=infantsnew[,-2]))
+```
+AIC 
+```{r}
+fit <- lm(`Median Rate`~.,data=infantsnew)
+result.AIC <- step(fit, k=2,direction="both",trace=FALSE)
+summary(result.AIC)
+```
+
+BIC
+```{r}
+result.BIC <- step(fit, k=log(dim(infantsnew)[2]),direction="both",trace=FALSE)
+summary(result.BIC)
+```
+
+2 sample-test and F test for median rates for infants and toddlers
+```{r}
+t.test(x1, x2)
+var.test(x1, x2,  alternative = "two.sided")
+```
+
+2 sample-test and F test for median rates for infants and preschoolers
+```{r}
+t.test(x1, x3)
+var.test(x1, x3,  alternative = "two.sided")
+```
+
+2 sample-test and F test for median rates for infants and school age children
+```{r}
+t.test(x1, x4)
+var.test(x1, x4,  alternative = "two.sided")
+```
+
+2 sample-test and F test for subsidy rates for toddlers and preschoolers
+```{r}
+t.test(y2, y3)
+var.test(y2, y3,  alternative = "two.sided")
+```
+
+2 sample-test and F test for subsidy rates for infants and school age children
+```{r}
+t.test(y1, y4)
+var.test(y1, y4,  alternative = "two.sided")
+```
+
+```{r}
+library("multcompView")
+datarev <- read.csv("WA state_ccc 2rev.csv", header=TRUE)
+datarevclean <- subset (datarev, select = -1)
+anova <- aov(datarev$Subsidy.Rate ~ datarev$Age.Group)
+TukeyHSD(anova, conf.level=.95)
+```
+
+```{r}
+anova1 <- aov(datarev$Median.Rate ~ datarev$Age.Group)
+TukeyHSD(anova1, conf.level=.95)
+``` 

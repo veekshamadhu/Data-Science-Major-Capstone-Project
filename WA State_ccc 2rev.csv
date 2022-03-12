@@ -1,0 +1,157 @@
+County,Age Group,Subsidy Rate,Median Rate,75th Percentile,% Prov Reporting
+Adams,Infants,765,0,0,0
+Asotin,Infants,765,737,817,0.90
+Benton,Infants,1005,1083,1146,0.91
+Chelan,Infants,765,855,868,1.00
+Clallam,Infants,1005,780,926,0.80
+Clark,Infants,1271,1317,1356,0.91
+Columbia,Infants,855,0,0,0
+Cowlitz,Infants,1005,910,1048,0.89
+Douglas,Infants,765,0,0,0
+Ferry,Infants,765,0,0,0
+Franklin,Infants,765,1083,1250,0.89
+Garfield,Infants,765,0,0,0
+Grant,Infants,765,748,825,0.67
+Grays Harbor,Infants,1005,706,737,1.00
+Island,Infants,1271,1035,1035,0.86
+Jefferson,Infants,1005,0,0,0
+King,Infants,1555,1625,2015,0.91
+Kitsap,Infants,1059,1062,1229,0.90
+Kittitas,Infants,855,878,904,0.89
+Klickitat,Infants,1005,0,0,0
+Lewis,Infants,1005,823,875,0.96
+Lincoln,Infants,765,0,0,0
+Mason,Infants,1005,763,842,0.92
+Okanogan,Infants,765,1107,1293,0.69
+Pacific,Infants,1005,802,802,0.75
+Pend Oreille,Infants,765,0,0,0
+Pierce,Infants,1059,1040,1200,0.95
+Sun Juan,Infants,1271,1387,1387,1.00
+Skagit,Infants,1271,1100,1157,0.88
+Skamania,Infants,1005,0,0,0
+Snohomish,Infants,1271,1409,1593,0
+Spokane,Infants,985,1020,1151,0.88
+Stevens,Infants,765,822,853,0.86
+Thurston,Infants,1005,1083,1219,0.93
+Wahkiakum,Infants,1005,0,0,0
+Walla Walla,Infants,1005,1275,1275,0.82
+Whatcom,Infants,1271,1117,1155,0.94
+Whitman,Infants,1005,1138,1332,0.77
+Yakima,Infants,855,885,975,0.74
+Adams,Toddler,703,0,0,0
+Asotin,Toddler,703,715,764,0.80
+Benton,Toddler,884,980,1060,0.88
+Chelan,Toddler,703,775,825,0.94
+Clallam,Toddler,884,975,975,0.70
+Clark,Toddler,1072,1203,1256,0.87
+Columbia,Toddler,686,0,0,0
+Cowlitz,Toddler,884,770,908,0.93
+Douglas,Toddler,703,775,775,0.80
+Ferry,Toddler,703,0,0,0
+Franklin,Toddler,686,1001,1087,0.79
+Garfield,Toddler,703,0,0,0
+Grant,Toddler,703,693,758,0.57
+Grays Harbor,Toddler,884,650,693,0.95
+Island,Toddler,1072,870,938,0.86
+Jefferson,Toddler,884,0,0,0
+King,Toddler,1303,1447,1758,0.86
+Kitsap,Toddler,921,949,1044,0.90
+Kittitas,Toddler,686,850,867,0.89
+Klickitat,Toddler,884,0,0,0
+Lewis,Toddler,884,800,814,0.92
+Lincoln,Toddler,703,0,0,0
+Mason,Toddler,884,702,741,1.00
+Okanogan,Toddler,703,916,1200,0.69
+Pacific,Toddler,884,715,715,0.75
+Pend Oreille,Toddler,703,0,0,0
+Pierce,Toddler,921,888,1027,0.94
+Sun Juan,Toddler,1072,1213,1326,1.00
+Skagit,Toddler,1072,945,1035,0.85
+Skamania,Toddler,884,0,0,0
+Snohomish,Toddler,1072,1195,1379,0.93
+Spokane,Toddler,840,897,997,0.83
+Stevens,Toddler,703,689,787,0.86
+Thurston,Toddler,884,997,1125,0.93
+Wahkiakum,Toddler,884,0,0,0
+Walla Walla,Toddler,884,1023,1218,0.73
+Whatcom,Toddler,1072,1062,1099,0.94
+Whitman,Toddler,884,1038,1225,0.69
+Yakima,Toddler,686,726,805,0.74
+Adams,Preschool,661,0,0,0
+Asotin,Preschool,661,651,700,0.80
+Benton,Preschool,770,850,890,0.70
+Chelan,Preschool,661,745,778,0.94
+Clallam,Preschool,770,704,953,0.70
+Clark,Preschool,923,975,1054,0.71
+Columbia,Preschool,662,0,0,0
+Cowlitz,Preschool,770,678,779,0.86
+Douglas,Preschool,661,775,775,0.60
+Ferry,Preschool,661,0,0,0
+Franklin,Preschool,662,880,910,0.63
+Garfield,Preschool,661,0,0,0
+Grant,Preschool,661,650,719,0.62
+Grays Harbor,Preschool,770,563,607,0.86
+Island,Preschool,923,735,856,0.79
+Jefferson,Preschool,770,0,0,0
+King,Preschool,1204,1290,1508,0.74
+Kitsap,Preschool,821,750,966,0.79
+Kittitas,Preschool,662,767,811,1.00
+Klickitat,Preschool,770,0,0,0
+Lewis,Preschool,770,650,790,0.88
+Lincoln,Preschool,661,0,0,0
+Mason,Preschool,770,641,800,1.00
+Okanogan,Preschool,661,675,817,0.44
+Pacific,Preschool,770,450,550,0.50
+Pend Oreille,Preschool,661,0,0,0
+Pierce,Preschool,821,775,918,0.91
+Sun Juan,Preschool,923,963,1040,1.00
+Skagit,Preschool,923,790,928,0.81
+Skamania,Preschool,770,0,0,0
+Snohomish,Preschool,923,1042,1252,0.81
+Spokane,Preschool,773,821,900,0.78
+Stevens,Preschool,661,689,743,9.43
+Thurston,Preschool,770,567,998,0.85
+Wahkiakum,Preschool,770,0,0,0
+Walla Walla,Preschool,770,869,1005,0.64
+Whatcom,Preschool,923,937,1008,0.82
+Whitman,Preschool,770,896,1060,0.77
+Yakima,Preschool,662,670,758,0.64
+Adams,School Age,637,0,0,0
+Asotin,School Age,637,585,596,0.80
+Benton,School Age,607,390,630,0.91
+Chelan,School Age,637,335,610,0.88
+Clallam,School Age,607,488,703,0.40
+Clark,School Age,689,628,758,0.69
+Columbia,School Age,517,0,0,0
+Cowlitz,School Age,607,440,555,0.64
+Douglas,School Age,637,0,0,1.00
+Ferry,School Age,637,0,0,0
+Franklin,School Age,517,611,631,0.79
+Garfield,School Age,637,0,0,0
+Grant,School Age,637,302,315,0.86
+Grays Harbor,School Age,607,325,390,0.33
+Island,School Age,689,583,638,0.93
+Jefferson,School Age,607,0,0,0
+King,School Age,724,672,884,0.73
+Kitsap,School Age,566,535,650,0.52
+Kittitas,School Age,517,314,340,1.00
+Klickitat,School Age,607,0,0,0
+Lewis,School Age,607,352,572,0.68
+Lincoln,School Age,637,0,0,0
+Mason,School Age,607,442,544,0.42
+Okanogan,School Age,637,260,260,0.75
+Pacific,School Age,607,0,0,0
+Pend Oreille,School Age,637,0,0,0
+Pierce,School Age,566,546,690,0.59
+Sun Juan,School Age,689,433,659,1.00
+Skagit,School Age,689,420,458,0.77
+Skamania,School Age,607,0,0,0
+Snohomish,School Age,689,693,789,0.80
+Spokane,School Age,605,485,579,0.67
+Stevens,School Age,637,446,530,0.43
+Thurston,School Age,607,563,683,0.45
+Wahkiakum,School Age,607,0,0,0
+Walla Walla,School Age,607,350,350,0.64
+Whatcom,School Age,689,455,550,0.96
+Whitman,School Age,607,351,472,0.31
+Yakima,School Age,517,325,472,
